@@ -16,10 +16,11 @@ class Animal
   public:
 	// Constructors
 	Animal();
-	Animal(std::string &type);
+	explicit Animal(std::string &type);
 	Animal(const Animal &copy);
 	Animal &operator=(const Animal &copy);
-	~Animal();
+	virtual ~Animal();
 	// Member Functions
-    void makeSound();
+	virtual void makeSound() const;
+	std::string getType(void) const;
 };

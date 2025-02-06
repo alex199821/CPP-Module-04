@@ -2,7 +2,7 @@
 
 // Constructors
 
-Animal::Animal() : type("")
+Animal::Animal() : type("Animal")
 {
 	std::cout << "Default Animal Constructor Called" << std::endl;
 }
@@ -30,12 +30,16 @@ Animal &Animal::operator=(const Animal &copy)
 Animal::Animal(const Animal &copy) : type(copy.type)
 {
 	*this = copy;
-	std::cout <<  "Animal with type of " << type << " was copied." << std::endl;
+	std::cout << "Animal with type of " << type << " was copied." << std::endl;
 };
 
-//Member Functions
-
-void Animal::makeSound()
+// Member Functions
+void Animal::makeSound() const
 {
-    std::cout << "***MAKING ANIMAL SOUNDS***" << std::endl;
+	std::cout << "***MAKING ANIMAL SOUNDS***" << std::endl;
+}
+
+std::string Animal::getType(void) const
+{
+	return (type);
 }
