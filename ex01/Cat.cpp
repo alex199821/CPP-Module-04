@@ -8,11 +8,11 @@ Cat::Cat() : Animal()
 	std::cout << "Cat Default Constructor Called" << std::endl;
 }
 
-Cat::Cat(const Cat &copy) : Animal()
+Cat::Cat(const Cat &copy) : Animal(copy)
 {
-	*this = copy;
+	brain = new Brain(*copy.brain);
 	std::cout << "Cat with type of " << type << " was copied." << std::endl;
-};
+}
 
 Cat::~Cat()
 {
@@ -36,4 +36,9 @@ Cat &Cat::operator=(const Cat &copy)
 void Cat::makeSound() const
 {
 	std::cout << "Bark Bark Bark..." << std::endl;
+}
+
+Brain *Cat::getBrain() const
+{
+	return (brain);
 }

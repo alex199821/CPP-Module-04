@@ -5,13 +5,15 @@
 class Dog : public Animal
 {
   private:
-  	Brain *brain;
+	Brain *brain;
+
   public:
 	// Constructors
 	Dog();
 	Dog(const Dog &copy);
 	Dog &operator=(const Dog &copy);
 	~Dog() override;
-	// Constructors
+	// Methods
 	void makeSound() const override;
+	Brain *getBrain() const;
 };

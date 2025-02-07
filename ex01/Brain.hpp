@@ -8,13 +8,15 @@
 #include <sstream>
 #include <string>
 
-class Brain {
-public:
+class Brain
+{
+  private:
+	std::string ideas[100];
+
+  public:
 	// Constructors
 	Brain();
 	Brain(const Brain &copy);
 	~Brain();
 	Brain &operator=(const Brain &copy);
-private:
-	std::string ideas[100];
 };
