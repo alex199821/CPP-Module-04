@@ -11,27 +11,29 @@ void	leaks(void)
 
 int	main(void)
 {
-	// atexit(leaks);
+	atexit(leaks);
 	std::cout << "------------------------- Animal Started --------------------------" << std::endl;
-	const Animal *meta = new Animal();
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-    std::cout << meta->getType() << " " << std::endl;
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
+	const Animal *randomAnimal = new Animal();
+	const Animal *newDog = new Dog();
+	const Animal *newCat = new Cat();
+	std::cout << randomAnimal->getType() << " " << std::endl;
+	std::cout << newDog->getType() << " " << std::endl;
+	std::cout << newCat->getType() << " " << std::endl;
+	randomAnimal->makeSound();
+	newDog->makeSound();
+	newCat->makeSound();
 	std::cout << "----------------------- WrongAnimal Started -----------------------" << std::endl;
-	const WrongAnimal *wrongMeta = new WrongAnimal();
+	const WrongAnimal *wrongRandomAnimal = new WrongAnimal();
 	const WrongCat *wrongCat = new WrongCat();
-	std::cout << wrongMeta->getType() << " " << std::endl;
+	std::cout << wrongRandomAnimal->getType() << " " << std::endl;
 	std::cout << wrongCat->getType() << " " << std::endl;
-	wrongMeta->makeSound();
+	wrongRandomAnimal->makeSound();
 	wrongCat->makeSound();
 	std::cout << "-------------------------------------------------------------------" << std::endl;
-	delete meta;
-	delete j;
-	delete i;
+	delete randomAnimal;
+	delete newDog;
+	delete newCat;
+	delete wrongRandomAnimal;
+	delete wrongCat;
 	return (0);
 }
