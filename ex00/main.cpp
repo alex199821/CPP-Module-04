@@ -11,7 +11,7 @@ void	leaks(void)
 
 int	main(void)
 {
-	atexit(leaks);
+	// atexit(leaks);
 	std::cout << "------------------------- Animal Started --------------------------" << std::endl;
 	const Animal *randomAnimal = new Animal();
 	const Animal *newDog = new Dog();
@@ -24,7 +24,7 @@ int	main(void)
 	newCat->makeSound();
 	std::cout << "----------------------- WrongAnimal Started -----------------------" << std::endl;
 	const WrongAnimal *wrongRandomAnimal = new WrongAnimal();
-	const WrongCat *wrongCat = new WrongCat();
+	const WrongAnimal *wrongCat = new WrongCat();
 	std::cout << wrongRandomAnimal->getType() << " " << std::endl;
 	std::cout << wrongCat->getType() << " " << std::endl;
 	wrongRandomAnimal->makeSound();

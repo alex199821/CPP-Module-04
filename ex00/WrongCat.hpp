@@ -9,8 +9,7 @@ class WrongCat : public WrongAnimal
         WrongCat();
         WrongCat(const WrongCat &copy);
         WrongCat &operator=(const WrongCat &copy);
-        ~WrongCat() override;
-    	// Constructors
-    	void makeSound() const override;
-
+        ~WrongCat();
+        // Methods
+        void makeSound() const;
 };

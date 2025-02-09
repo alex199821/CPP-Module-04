@@ -35,7 +35,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal &copy) : type(copy.type)
 // Member Functions
 void WrongAnimal::makeSound() const
 {
-	std::cout << "***MAKING WRONGANIMAL SOUNDS***" << std::endl;
+	std::cout << "***MAKING WRONG ANIMAL SOUNDS***" << std::endl;
 }
 
 std::string WrongAnimal::getType(void) const
