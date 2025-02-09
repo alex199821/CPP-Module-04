@@ -15,10 +15,10 @@ int	main(void)
 
 	Animal *animalsArray[animalCount];
 
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-	delete j;
-	delete i;
+	const Animal *constructedDog = new Dog();
+	const Animal *constructedCat = new Cat();
+	delete constructedDog;
+	delete constructedCat;
 
 	for (int i = 0; i < animalCount / 2; i++)
 	{

@@ -9,17 +9,17 @@ void	leaks(void)
 
 int	main(void)
 {
-	// atexit(leaks);
-	// const Animal *testAnimal = new Animal();
+	//atexit(leaks);
+	//const Animal *testAnimal = new Animal();
 	std::cout << "-------------------Normal Tests-------------------" << std::endl;
 	int animalCount = 10;
 
 	Animal *animalsArray[animalCount];
 
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-	delete j;
-	delete i;
+	const Animal *constructedDog = new Dog();
+	const Animal *constructedCat = new Cat();
+	delete constructedDog;
+	delete constructedCat;
 
 	for (int i = 0; i < animalCount / 2; i++)
 	{

@@ -11,7 +11,7 @@ void	leaks(void)
 
 int	main(void)
 {
-	// atexit(leaks);
+	atexit(leaks);
 	std::cout << "------------------------- Animal Started --------------------------" << std::endl;
 	const Animal *randomAnimal = new Animal();
 	const Animal *newDog = new Dog();
